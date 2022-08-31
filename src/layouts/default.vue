@@ -1,6 +1,8 @@
 <template>
-  <the-header :navigations="navigations" />
-  <router-view />
+  <div>
+    <the-header :navigations="navigations" />
+    <router-view />
+  </div>
 </template>
 
 <script>
