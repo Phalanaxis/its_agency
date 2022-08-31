@@ -260,14 +260,12 @@ section {
   }
 }
 
-/* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
-  width: 2px; /* ширина для вертикального скролла */
-  height: 2px; /* высота для горизонтального скролла */
+  width: 2px;
+  height: 2px;
   background-color: transparent;
 }
 
-/* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
   border-radius: 9em;
@@ -277,8 +275,6 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background-color: transparent;
 }
-
-/* Стрелки */
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
   background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
