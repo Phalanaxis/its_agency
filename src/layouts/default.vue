@@ -2,14 +2,17 @@
   <div>
     <the-header :navigations="navigations" />
     <router-view />
+    <the-footer />
   </div>
 </template>
 
 <script>
 import TheHeader from '../components/TheHeader.vue'
+import TheFooter from '../components/TheFooter.vue'
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    TheFooter
   },
   setup () {
     const navigations = [
@@ -40,7 +43,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

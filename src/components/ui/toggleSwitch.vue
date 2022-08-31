@@ -1,9 +1,14 @@
 <template>
   <div class="toggle__container">
     <div class="toggle__switch-box">
-      <input type="checkbox" class="toggle__switch-checkbox" v-model="isActive">
+      <input
+        type="checkbox"
+        class="toggle__switch-checkbox"
+        v-model="isActive"
+        @change="changeEvent()"
+      >
       <div :class="{'toggle__switch-knob': true, 'toggle__switch-knob-active': isActive }" />
-      <div :class="{'toggle__switch-layer': true, 'toggle__switch-layer-active': isActive}" />
+      <div :class="{'toggle__switch-layer': true, 'toggle__switch-layer-active': isActive }" />
     </div>
     <div class="toggle__text">
       {{ title }}
@@ -14,16 +19,22 @@
 <script>
 import { ref } from 'vue'
 export default {
+  emits: ['changeEvent'],
   props: {
     title: {
       type: String,
       default: 'Empty'
     }
   },
-  setup () {
+  setup (props, { emit }) {
     const isActive = ref(false)
+
+    function changeEvent () {
+      emit('changeEvent', isActive.value)
+    }
     return {
-      isActive
+      isActive,
+      changeEvent
     }
   }
 }
