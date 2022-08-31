@@ -71,14 +71,14 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      height: 15px;
+      height: 15rem;
       &_active {
         z-index: 5;
-        height: 100px;
+        height: 100rem;
         background-color: #FFF;
         .BaseSelect__element {
           text-align: left;
-          padding: 17px 0 0 24px;
+          padding: 17rem 0 0 24rem;
           transition: background-color .2s;
           &-choosen {
             order: 0;
@@ -97,11 +97,11 @@ export default {
       text-align: right;
       font-weight: 500;
       letter-spacing: 0.06em;
-      font-size: 12px;
+      font-size: 12rem;
       width: 100%;
-      height: 50px;
+      height: 50rem;
       display: inline-block;
-      padding: 0 15px 0 0;
+      padding: 0 15rem 0 0;
       align-items: center;
       position: relative;
       z-index: 4;
@@ -111,9 +111,9 @@ export default {
       &::after {
         position: absolute;
         right: 0;
-        top: 5px;
-        width: 8px;
-        height: 6px;
+        top: 5rem;
+        width: 8rem;
+        height: 6rem;
         content: '';
         background-image: url('@/assets/svg/Arrow.svg');
         background-repeat: no-repeat;

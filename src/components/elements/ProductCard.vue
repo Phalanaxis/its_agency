@@ -37,7 +37,7 @@ export default {
       default: ''
     }
   },
-  setup ({ image, id }) {
+  setup ({ image, id, title, price }) {
     const products = useProductsStore()
     const imageLink = computed(() => {
       if (image !== '') {
@@ -46,7 +46,17 @@ export default {
     })
 
     function addToCart () {
-      products.cart.push({'id': id, 'amount': 1})
+      if (!products.cart.find(item => item.id === id)) {
+        products.cart.push({
+          'id': id,
+          'amount': 1,
+          'image': image,
+          'title': title,
+          'price': price
+        })
+      } else {
+        products.cart.find(item => item.id === id).amount++
+      }
     }
     return {
       products,
@@ -59,6 +69,11 @@ export default {
 
 <style lang="scss" scoped>
   .card {
+    padding: 0 0 22rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 680px) {
+      padding: 0 0 38px 0;
+    }
     &:hover {
       .card__button {
         opacity: 1;
@@ -79,10 +94,10 @@ export default {
     }
     &__title {
       font-weight: 300;
-      font-size: 16px;
-      line-height: 18px;
+      font-size: 16rem;
+      line-height: 18rem;
       letter-spacing: 0.02em;
-      margin: 16px 0 24px 0;
+      margin: 16rem 0 24rem 0;
     }
     &__price-container {
       display: flex;
@@ -91,35 +106,40 @@ export default {
     }
     &__price {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 16rem;
     }
     &__button {
       position: relative;
-      width: 80px;
-      height: 32px;
+      width: 80rem;
+      height: 32rem;
       background-color: #7BB899;
-      border-radius: 8px;
+      border-radius: 8rem;
       cursor: pointer;
       opacity: 0;
       content: '';
       transition: opacity .2s;
       &::after {
         position: absolute;
-        top: calc((100% - 1px)/2);
-        left: calc((100% - 12px)/2);
-        height: 2px;
-        width: 12px;
+        top: calc((100% - 1rem)/2);
+        left: calc((100% - 12rem)/2);
+        height: 2rem;
+        width: 12rem;
         content: '';
         background-color: #000;
       }
       &::before {
         position: absolute;
-        top: calc(50% - 5.5px);
-        left: calc(50% - 1px);
-        height: 12px;
-        width: 2px;
+        top: calc(50% - 5.5rem);
+        left: calc(50% - 1rem);
+        height: 12rem;
+        width: 2rem;
         content: '';
         background-color: #000;
+      }
+      @media screen and (max-width: 680px) {
+        opacity: 1;
+        width: 40px;
+        background-color: #F2F2F2;
       }
     }
   }

@@ -9,8 +9,8 @@ export const useProductsStore = defineStore('products', {
         image: 'image1.png',
         new: false,
         inStock: true,
-        contracted: true,
-        exclusive: true,
+        contracted: false,
+        exclusive: false,
         sale: false
       },
       {
@@ -20,7 +20,7 @@ export const useProductsStore = defineStore('products', {
         image: 'image2.png',
         new: false,
         inStock: true,
-        contracted: true,
+        contracted: false,
         exclusive: true,
         sale: false
       },
@@ -30,9 +30,9 @@ export const useProductsStore = defineStore('products', {
         price: '4500',
         image: 'image3.png',
         new: false,
-        inStock: true,
+        inStock: false,
         contracted: true,
-        exclusive: true,
+        exclusive: false,
         sale: false
       },
       {
@@ -41,9 +41,9 @@ export const useProductsStore = defineStore('products', {
         price: '8000',
         image: 'image2.png',
         new: true,
-        inStock: true,
-        contracted: true,
-        exclusive: true,
+        inStock: false,
+        contracted: false,
+        exclusive: false,
         sale: false
       },
       {
@@ -54,7 +54,7 @@ export const useProductsStore = defineStore('products', {
         new: true,
         inStock: true,
         contracted: true,
-        exclusive: true,
+        exclusive: false,
         sale: false
       },
       {
@@ -76,7 +76,7 @@ export const useProductsStore = defineStore('products', {
         new: true,
         inStock: true,
         contracted: true,
-        exclusive: true,
+        exclusive: false,
         sale: true
       }
     ],

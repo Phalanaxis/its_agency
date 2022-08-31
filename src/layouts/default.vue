@@ -1,7 +1,9 @@
 <template>
   <div>
     <the-header :navigations="navigations" />
-    <router-view />
+    <main class="main">
+      <router-view />
+    </main>
     <the-footer />
   </div>
 </template>
@@ -43,3 +45,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .main {
+    min-height: calc(100vh - 344rem);
+  }
+</style>

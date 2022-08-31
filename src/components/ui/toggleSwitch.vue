@@ -48,9 +48,9 @@ export default {
     }
     &__switch-box {
       position: relative;
-      width: 36px;
-      height: 22px;
-      margin: 0 12px 0 0;
+      width: 36rem;
+      height: 22rem;
+      margin: 0 12rem 0 0;
     }
     &__switch-checkbox {
       margin: 0;
@@ -63,25 +63,24 @@ export default {
     }
     &__switch-knob {
       position: absolute;
-      top: 7px;
-      left: 7px;
+      top: 7rem;
+      left: 7rem;
       z-index: 2;
-      width: 8px;
-      height: 8px;
+      width: 8rem;
+      height: 8rem;
       background-color: #000;
       border-radius: 50%;
       transition: left .2s;
       &-active {
-        left: 20px;
-        // right: 7px;
+        left: 20rem;
       }
     }
     &__switch-layer {
       position: absolute;
       top: 0;
       left: 0;
-      width: 36px;
-      height: 22px;
+      width: 36rem;
+      height: 22rem;
       background-color: #F2F2F2;
       border-radius: 40px;
       transition: background-color .3s;
@@ -90,7 +89,7 @@ export default {
       }
     }
     &__text {
-      font-size: 12px;
+      font-size: 12rem;
       letter-spacing: 0.06em;
     }
   }

@@ -16,47 +16,41 @@
 // 		line-height: $lineHeight;
 // 	}
 // }
-
-// @media screen and (min-width: 640px) {
-//     html {
-//         font-size: 1px;
-//     }
-// }
-html {
-    font-size: 1px;
+@media screen and (max-width: 680px) {
+    html {
+        font-size: 1px;
+    }
 }
-// @media screen and (min-width: 1160px) {
-//     html {
-//         font-size: 1px;
-//     }
-// }
+
+@media screen and (min-width: 681px) {
+    html {
+        font-size: 0.06vw;
+    }
+}
+
 
 
 @media screen and (min-width: 1281px) {
     html {
-        // font-size: 0.9px;
-        font-size: 0.07vw;
+        font-size: 0.06vw;
     }
 }
 
 @media screen and (min-width: 1440px) {
     html {
-        // font-size: 1px;
-        font-size: 0.07vw;
+        font-size: 0.06vw;
     }
 }
 
 @media screen and (min-width: 1600px) {
     html {
-        // font-size: 1.15px;
-        font-size: 0.07vw;
+        font-size: 0.06vw;
     }
 }
 
 @media screen and (min-width: 1920px) {
     html {
-        // font-size: 1.35px;
-        font-size: 0.07vw;
+        font-size: 0.06vw;
     }
 }
 

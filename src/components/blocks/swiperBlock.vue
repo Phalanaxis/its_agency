@@ -62,7 +62,7 @@ export default {
   .swiper {
     &__block {
       width: 100%;
-      height: 560px;
+      height: 560rem;
       position: relative;
     }
     &__container {
@@ -82,12 +82,14 @@ export default {
     }
     &__title {
       font-weight: 400;
-      font-size: 72px;
-      line-height: 64px;
+      font-size: 72rem;
+      line-height: 64rem;
       letter-spacing: -0.02em;
     }
     &__text {
-      margin: 24px 0 0 0;
+      font-weight: 500;
+      font-size: 16rem;
+      margin: 24rem 0 0 0;
       text-align: center;
     }
     &__slide {
@@ -101,19 +103,17 @@ export default {
     }
   }
   .swiper-pagination{
-    
     width: auto;
     display: flex;
-    // justify-content: center;
     position: relative;
     bottom: 0;
-    padding: 13px 24px;
+    padding: 13rem 24rem;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 16px;
     &__container {
       position: absolute;
       width: 100%;
-      bottom: 40px;
+      bottom: 40rem;
       display: flex;
       justify-content: center;
     }
@@ -121,7 +121,6 @@ export default {
       background-color: #FFF;
     }
   }
-
   :deep(.swiper-button-prev) {
     color: #FFF;
     left: 20%;
@@ -132,13 +131,7 @@ export default {
     right: 20%;
     top: 75%;
   }
-
   :deep(.swiper-button-disabled) {
     display: none;
   }
-  
-  // :deep(.swiper-pagination) {
-  //   width: auto;
-  //   // background-color: red;
-  // }
 </style>
